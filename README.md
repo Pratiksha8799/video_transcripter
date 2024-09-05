@@ -12,6 +12,8 @@ The YouTube Transcript Fetcher is a Python script designed to automate the retri
 
 - Simple Output: Combines the transcript into a single text string and prints it to the console.
 
+- Multilanguage: The script supports to multiple laguages. 
+
 ## Prerequisites
 1. Python Environment
 Python Version: Ensure that Python 3.x or higher is installed on your system. The project is compatible with Python 3 and uses modern libraries and features.
@@ -30,6 +32,8 @@ You need to install specific Python libraries for interacting with browser and f
 
 * Extracting Video ID: The video ID is extracted from the URL.
 
+* Extracting language code: Identify which language the transcript is in and return code.
+
 * Fetching Transcripts: The transcript for the video is fetched using the YouTubeTranscriptApi.
 
 * Output: The transcript is saved into txt file.
@@ -44,8 +48,6 @@ You need to install specific Python libraries for interacting with browser and f
 - Developers: Developers looking to integrate transcript retrieval into their own applications or tools.
 ## Future scope
 
-* Language Support: Add the ability to retrieve transcripts in different languages if available.
-
 * User Interface: Develop a simple GUI to allow non-technical users to input search queries and view transcripts easily.
 
 * Data Storage: Implement a feature to save transcripts to any other file (e.g. JSON) for future reference.
@@ -59,7 +61,7 @@ You need to install specific Python libraries for interacting with browser and f
 
 ##  Conclusion 🚀
 
-YouTube Transcript Fetcher is a useful for automating the retrieval of video transcripts from YouTube. While it has some limitations, such as dependency on Selenium and the availability of transcripts, it serves as a strong foundation for further development and customization to meet various user needs.
+YouTube Transcript Fetcher automates the retrieval of video transcripts from YouTube in any language. While it has some limitations, such as dependency on Selenium and the availability of transcripts, it serves as a strong foundation for further development and customization to meet various user needs.
 ## Support
 
 For support, email pratikshagarkar871999@gmail.com

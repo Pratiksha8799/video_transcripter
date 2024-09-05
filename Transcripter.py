@@ -20,8 +20,14 @@ class YT_transcript():
     @staticmethod    
     def get_youtube_transcript(video_id):
         try:
-            # Fetch the transcript
-            transcript = YouTubeTranscriptApi.get_transcript(video_id)
+            # Retrieves the language code.
+            transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+            for transcript in transcript_list:
+                print(f"Language code: {transcript.language_code}, Language: {transcript.language}")
+            code = transcript.language_code
+            
+            # Fetch the transcript for a particular language code.
+            transcript = YouTubeTranscriptApi.get_transcript(video_id,languages=[code])
     
             # Combine transcript into a single string
             transcript_text = "\n".join([entry['text'] for entry in transcript])
@@ -29,7 +35,8 @@ class YT_transcript():
             return transcript_text
         except Exception as e:
             return str(e)   
-        
+    
+
     def save_transcript_to_file(self, video_id, transcript_text):
         # Create a directory for transcripts if it doesn't exist
         if not os.path.exists('transcripts'):
@@ -76,3 +83,5 @@ if __name__ == '__main__':
     name = "21 notes in english episode 1"
     obj = YT_transcript(name)
     obj.yt_interraction()
+    
+    
